@@ -1,0 +1,110 @@
+<svg viewBox="0 0 960 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chevy C10 square-body pickup — chrome and red line art">
+  <defs>
+    <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".35" stop-color="#cfd2d8"/>
+      <stop offset=".52" stop-color="#83868d"/>
+      <stop offset=".66" stop-color="#e8eaee"/>
+      <stop offset="1" stop-color="#9a9da4"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a2a2e"/>
+      <stop offset=".5" stop-color="#101012"/>
+      <stop offset="1" stop-color="#1c1c1f"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b9bcc2" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#3a3d42" stop-opacity=".9"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7d0d13"/>
+      <stop offset=".5" stop-color="#d81a24"/>
+      <stop offset="1" stop-color="#7d0d13"/>
+    </linearGradient>
+    <radialGradient id="shadow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#000" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ground shadow -->
+  <ellipse cx="480" cy="424" rx="380" ry="26" fill="url(#shadow)"/>
+
+  <!-- red accent swoosh (echoes logo frame) -->
+  <path d="M70 436 H890" stroke="url(#red)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M120 452 H840" stroke="url(#chrome)" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
+
+  <!-- cab + fleetside body (facing right) -->
+  <path d="M120 330
+           L120 268
+           Q120 258 130 256
+           L150 252
+           L158 190
+           Q160 178 172 176
+           L328 168
+           L392 108
+           Q398 102 408 102
+           L560 102
+           Q572 102 574 112
+           L586 168
+           L830 176
+           Q844 178 846 190
+           L852 252
+           Q866 254 868 264
+           L868 330
+           Q868 340 858 340
+           L816 340
+           A74 74 0 0 0 668 340
+           L322 340
+           A74 74 0 0 0 174 340
+           L130 340
+           Q120 340 120 330 Z"
+        fill="url(#body)" stroke="url(#chrome)" stroke-width="6" stroke-linejoin="round"/>
+
+  <!-- windshield + door glass -->
+  <path d="M402 116 L556 116 Q564 116 566 124 L576 166 L342 166 Z" fill="url(#glass)"/>
+  <path d="M498 116 L502 166" stroke="#101012" stroke-width="7"/>
+
+  <!-- door seam + handle -->
+  <path d="M470 172 L468 336" stroke="#3a3d42" stroke-width="3"/>
+  <rect x="492" y="216" width="34" height="7" rx="3.5" fill="url(#chrome)"/>
+
+  <!-- belt-line chrome trim -->
+  <path d="M132 262 H852" stroke="url(#chrome)" stroke-width="4" opacity=".9"/>
+  <!-- red pinstripe -->
+  <path d="M132 276 H852" stroke="url(#red)" stroke-width="3"/>
+
+  <!-- bed rail hint -->
+  <path d="M590 172 H836" stroke="#3a3d42" stroke-width="3"/>
+
+  <!-- front detail: grille + headlight + bumper -->
+  <rect x="838" y="286" width="26" height="10" rx="3" fill="url(#chrome)"/>
+  <rect x="838" y="302" width="26" height="10" rx="3" fill="url(#chrome)" opacity=".7"/>
+  <circle cx="846" cy="242" r="11" fill="url(#glass)" stroke="url(#chrome)" stroke-width="3"/>
+  <path d="M828 344 H880 Q890 344 890 336 L890 330" stroke="url(#chrome)" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <!-- rear bumper -->
+  <path d="M162 344 H108 Q98 344 98 336 L98 330" stroke="url(#chrome)" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+  <!-- wheels: deep-dish 5-spoke -->
+  <g>
+    <circle cx="248" cy="340" r="72" fill="#0a0a0b" stroke="#2c2c30" stroke-width="10"/>
+    <circle cx="248" cy="340" r="44" fill="#141416" stroke="url(#chrome)" stroke-width="6"/>
+    <g stroke="url(#chrome)" stroke-width="7" stroke-linecap="round">
+      <path d="M248 340 L248 304"/><path d="M248 340 L282 329"/><path d="M248 340 L269 369"/>
+      <path d="M248 340 L227 369"/><path d="M248 340 L214 329"/>
+    </g>
+    <circle cx="248" cy="340" r="9" fill="url(#chrome)"/>
+  </g>
+  <g>
+    <circle cx="742" cy="340" r="72" fill="#0a0a0b" stroke="#2c2c30" stroke-width="10"/>
+    <circle cx="742" cy="340" r="44" fill="#141416" stroke="url(#chrome)" stroke-width="6"/>
+    <g stroke="url(#chrome)" stroke-width="7" stroke-linecap="round">
+      <path d="M742 340 L742 304"/><path d="M742 340 L776 329"/><path d="M742 340 L763 369"/>
+      <path d="M742 340 L721 369"/><path d="M742 340 L708 329"/>
+    </g>
+    <circle cx="742" cy="340" r="9" fill="url(#chrome)"/>
+  </g>
+
+  <!-- hood highlight -->
+  <path d="M600 96 Q640 88 700 92" stroke="#f4f4f6" stroke-width="3" opacity=".5" fill="none"/>
+</svg>
