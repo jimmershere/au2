@@ -288,6 +288,10 @@ body.nav-open .nav-toggle span::after { transform: rotate(-45deg); top: 0; }
   background: linear-gradient(180deg, #fff, #cfd2d8 40%, #83868d 55%, #e8eaee 70%, #9a9da4);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
+/* A stat whose "number" is a word: the numeral size is tuned for 2-5 glyphs and
+   overflows a narrow column at word length. */
+.stat .num.num-word { font-size: clamp(1.4rem, 2.6vw, 2rem); letter-spacing: .01em; }
+
 .stat .lbl {
   font-family: var(--font-head); text-transform: uppercase; letter-spacing: .18em;
   font-size: .78rem; color: var(--muted); margin-top: 6px;
