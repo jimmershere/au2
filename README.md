@@ -38,23 +38,32 @@ python3 scripts/build-merch.py     # regenerate merch.html after editing the cat
 - Design art lives in `assets/img/merch/` (JPEG+WebP at 520/1000w, generated
   from the master PNGs — masters are not in this repo).
 
-### Wiring real products (gated — human publishes, always)
+### Printify integration
 
-Printify drafts + rendered mockups come from the Portwright Press tooling in
-`tee-empire`:
+Two read/write layers, deliberately separate:
+
+**Pull (read-only, scripted):** `scripts/fetch-printify.py` syncs any catalog
+product that has a `printify_product_id` — downloads its rendered mockups into
+`assets/img/merch/products/<id>/`, writes its **exact** color options
+(name + hex, filtered to enabled variants) into the catalog, and fills a null
+price from the cheapest enabled variant. The API key is loaded at runtime and
+never written to disk:
 
 ```bash
-cd /app/tee-empire
-./.venv/bin/python scripts/publish_merch_draft.py --brand <brand> \
-  --product bottle|mug|sticker --design <art.png> --slug au2-<x> \
-  --name "…" --price 28
+PRINTIFY_API_KEY=$(ssh quasimodo-lan "grep '^PRINTIFY_API_KEY=' /app/cc/empire/.env | cut -d= -f2-") \
+    python3 scripts/fetch-printify.py
+python3 scripts/build-merch.py
 ```
 
-That creates a **draft only** (`visible: false`) and downloads mockups; pushing
-a listing live on Etsy stays a human action in the Printify/Etsy UI (fleet
-rule 5). Requires `PRINTIFY_API_KEY` in `tee-empire/.env` — not present on
-pop-os as of 2026-09-19. Once listings are live, paste their URLs into
-`products.json`, run the builder, deploy.
+Each product gets a detail page (`merch-<id>.html`) with a mockup gallery and
+color-sample dots straight from Printify's data.
+
+**Push (gated — human publishes, always):** new Printify products are created
+either by hand in the Printify UI (then mapped via `printify_product_id`), or
+as drafts via `tee-empire/scripts/publish_merch_draft.py` (`visible: false`).
+Pushing a listing live on Etsy stays a human action in the Printify/Etsy UI
+(fleet rule 5). Once live, paste listing URLs into `products.json`, rebuild,
+deploy.
 
 ## Conventions
 

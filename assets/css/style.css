@@ -498,3 +498,26 @@ body.nav-open .nav-toggle span::after { transform: rotate(-45deg); top: 0; }
 .chip:hover { border-color: var(--chrome-lo); color: var(--text); }
 .chip.active { background: var(--red); border-color: var(--red); color: #fff; }
 .merch-grid .merch-card.is-hidden { display: none; }
+
+/* Merch: color dots + product detail */
+.color-dots { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; align-items: center; }
+.color-dots .dot {
+  width: 22px; height: 22px; border-radius: 50%; display: inline-block;
+  border: 2px solid rgba(255,255,255,.35); box-shadow: 0 0 0 1px rgba(0,0,0,.5) inset;
+}
+.color-dots-sm { margin-top: 2px; }
+.color-dots-sm .dot { width: 14px; height: 14px; border-width: 1px; }
+.dot-more { font-size: .72rem; color: var(--muted); letter-spacing: .04em; }
+.merch-name a { color: inherit; text-decoration: none; }
+.merch-name a:hover { color: var(--red-bright); }
+a.merch-art { display: block; }
+.product-grid { align-items: start; }
+.product-gallery { border-radius: var(--radius); }
+.price-lg { font-size: 2rem; }
+.thumb-row { display: flex; gap: 8px; padding: 10px; background: #e9e9ec; flex-wrap: wrap; }
+.thumb-row .thumb {
+  width: 64px; height: 64px; padding: 0; border-radius: 6px; overflow: hidden; cursor: pointer;
+  border: 2px solid transparent; background: #fff;
+}
+.thumb-row .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thumb-row .thumb.active { border-color: var(--red); }
