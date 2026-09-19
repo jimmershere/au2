@@ -1,0 +1,48 @@
+{
+  "shop": {
+    "etsy_shop_url": null,
+    "printify_note": "Drafts are created with tee-empire/scripts/publish_merch_draft.py (visible:false — publishing to Etsy stays a human action).",
+    "checkout_note_when_closed": "Online checkout opens soon. Want something now? Call the shop or send a message — we'll take care of you directly.",
+    "phone": "+1-231-409-2395"
+  },
+  "designs": [
+    {
+      "id": "panel-gaps",
+      "name": "Panel Gaps Crew",
+      "tagline": "Panel gaps you could set a watch to.",
+      "blurb": "The crew, the SS, and the calipers that keep everybody honest."
+    },
+    {
+      "id": "tc-original",
+      "name": "TC Original",
+      "tagline": "Pretty doesn't mean soft.",
+      "blurb": "Traverse City born, garage raised. Cooler packed, toolbox open."
+    },
+    {
+      "id": "garage-crew",
+      "name": "Garage Crew",
+      "tagline": "Unf*ck. Paint. Restore. Repeat.",
+      "blurb": "The shop mantra, straight off the toolbox."
+    }
+  ],
+  "products": [
+    {"id":"panel-gaps-tee","design":"panel-gaps","type":"Unisex Tee","category":"apparel","price":28,"etsy_url":null,"printify_blueprint":12},
+    {"id":"panel-gaps-hoodie","design":"panel-gaps","type":"Heavyweight Hoodie","category":"apparel","price":52,"etsy_url":null,"printify_blueprint":null},
+    {"id":"panel-gaps-mug","design":"panel-gaps","type":"Ceramic Mug · 11/15 oz","category":"drinkware","price":18,"etsy_url":null,"printify_blueprint":478},
+    {"id":"panel-gaps-sticker","design":"panel-gaps","type":"Kiss-Cut Sticker","category":"stickers-magnets","price":5,"etsy_url":null,"printify_blueprint":400},
+    {"id":"panel-gaps-magnet","design":"panel-gaps","type":"Fridge Magnet","category":"stickers-magnets","price":7,"etsy_url":null,"printify_blueprint":null},
+    {"id":"tc-original-tee","design":"tc-original","type":"Unisex Tee","category":"apparel","price":28,"etsy_url":null,"printify_blueprint":12},
+    {"id":"tc-original-hoodie","design":"tc-original","type":"Heavyweight Hoodie","category":"apparel","price":52,"etsy_url":null,"printify_blueprint":null},
+    {"id":"tc-original-mug","design":"tc-original","type":"Ceramic Mug · 11/15 oz","category":"drinkware","price":18,"etsy_url":null,"printify_blueprint":478},
+    {"id":"tc-original-bottle","design":"tc-original","type":"Stainless Water Bottle","category":"drinkware","price":28,"etsy_url":null,"printify_blueprint":887},
+    {"id":"tc-original-sticker","design":"tc-original","type":"Kiss-Cut Sticker","category":"stickers-magnets","price":5,"etsy_url":null,"printify_blueprint":400},
+    {"id":"tc-original-magnet","design":"tc-original","type":"Fridge Magnet","category":"stickers-magnets","price":7,"etsy_url":null,"printify_blueprint":null},
+    {"id":"garage-crew-tee","design":"garage-crew","type":"Unisex Tee","category":"apparel","price":28,"etsy_url":null,"printify_blueprint":12},
+    {"id":"garage-crew-hoodie","design":"garage-crew","type":"Heavyweight Hoodie","category":"apparel","price":52,"etsy_url":null,"printify_blueprint":null},
+    {"id":"garage-crew-mug","design":"garage-crew","type":"Ceramic Mug · 11/15 oz","category":"drinkware","price":18,"etsy_url":null,"printify_blueprint":478},
+    {"id":"garage-crew-bottle","design":"garage-crew","type":"Stainless Water Bottle","category":"drinkware","price":28,"etsy_url":null,"printify_blueprint":887},
+    {"id":"garage-crew-sticker","design":"garage-crew","type":"Kiss-Cut Sticker","category":"stickers-magnets","price":5,"etsy_url":null,"printify_blueprint":400},
+    {"id":"garage-crew-magnet","design":"garage-crew","type":"Fridge Magnet","category":"stickers-magnets","price":7,"etsy_url":null,"printify_blueprint":null},
+    {"id":"garage-crew-cards","design":"garage-crew","type":"Shop Cards · 10-pack","category":"cards-prints","price":12,"etsy_url":null,"printify_blueprint":null}
+  ]
+}
