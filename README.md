@@ -22,6 +22,14 @@ Photography is the shop's own work, pulled from its Facebook page and processed
 (resized, EXIF/GPS stripped) by the pipeline in the `expansion` repo
 (`photos/site-frames.md` there maps every frame).
 
+## Internal project files (`projects/`)
+
+Build plans, buy-or-pass analyses and budgets for cars the shop is
+considering. **Not site content**: `deploy.sh` excludes the whole folder, so
+offer numbers never reach the live server.
+
+- `projects/tiburon-mako/` — 2006 Tiburon GT V6 resto-mod plan and offer range
+
 ## Merch (`merch.html`)
 
 Data-driven from **`assets/data/products.json`** — the catalog is the source of

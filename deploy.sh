@@ -21,7 +21,7 @@ APPLY=0
 # Site content only. Dev files, the catalog source and build tooling stay home.
 EXCLUDES=(--exclude 'README.md' --exclude '_template.html' --exclude 'start-server.sh'
           --exclude 'deploy.sh' --exclude '.git' --exclude 'assets/img/au2.png'
-          --exclude 'scripts' --exclude 'assets/data'
+          --exclude 'scripts' --exclude 'assets/data' --exclude 'projects'
           --exclude 'assets/img/merch/src-*.png')
 
 echo "==> $SRC  ->  $HOST:$DEST"
