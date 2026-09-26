@@ -47,4 +47,4 @@ for p in index services about portfolio merch merch-au-car-logo-mug; do
   printf '    %-26s %s  frames=%s merch-cards=%s\n' "$p.html" "$code" "$n" "$m"
 done
 echo
-echo "Expected: 200 everywhere; frames 10/5/7/16 on the first four; merch shows 20+ cards."
+echo "Expected: 200 everywhere; frames 10/5/7/17; merch.html shows the drop card (pre-10/1 state)."
