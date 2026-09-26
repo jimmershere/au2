@@ -1,0 +1,329 @@
+{
+  "archived": "2026-09-26",
+  "note": "pre-launch test lineup, removed for the Fall 2026 drop teaser",
+  "products": [
+    {
+      "id": "au-car-logo-mug",
+      "design": null,
+      "name": "AU Car Logo",
+      "type": "Accent Mug \u00b7 11/15 oz",
+      "category": "drinkware",
+      "price": 12,
+      "etsy_url": null,
+      "printify_blueprint": 635,
+      "printify_product_id": "6aaec6fd07655618830e56f9",
+      "colors": [
+        {
+          "name": "Red",
+          "hex": "#CC141B"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#99232A"
+        },
+        {
+          "name": "Black",
+          "hex": "#000000"
+        },
+        {
+          "name": "Orange",
+          "hex": "#F97000"
+        },
+        {
+          "name": "Yellow",
+          "hex": "#FFE819"
+        },
+        {
+          "name": "Light Green",
+          "hex": "#a2d161"
+        },
+        {
+          "name": "Light Blue",
+          "hex": "#AADCF2"
+        },
+        {
+          "name": "Navy",
+          "hex": "#262F4C"
+        },
+        {
+          "name": "Purple",
+          "hex": "#862470"
+        },
+        {
+          "name": "Pink",
+          "hex": "#daa2a6"
+        }
+      ],
+      "images": [
+        "products/au-car-logo-mug/img1",
+        "products/au-car-logo-mug/img2",
+        "products/au-car-logo-mug/img3",
+        "products/au-car-logo-mug/img4",
+        "products/au-car-logo-mug/img5",
+        "products/au-car-logo-mug/img6",
+        "products/au-car-logo-mug/img7",
+        "products/au-car-logo-mug/img8"
+      ]
+    },
+    {
+      "id": "au-motorsports-tee",
+      "design": null,
+      "name": "Appearance Motorsports",
+      "type": "Boxy Tee",
+      "category": "apparel",
+      "price": 39,
+      "etsy_url": null,
+      "printify_blueprint": 1382,
+      "printify_product_id": "6aaec9c1e0eab3c76c0f54ab",
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#FFFFFF"
+        }
+      ],
+      "images": [
+        "products/au-motorsports-tee/img1",
+        "products/au-motorsports-tee/img2",
+        "products/au-motorsports-tee/img3",
+        "products/au-motorsports-tee/img4",
+        "products/au-motorsports-tee/img5",
+        "products/au-motorsports-tee/img6",
+        "products/au-motorsports-tee/img7"
+      ]
+    },
+    {
+      "id": "panel-gaps-tee",
+      "design": "panel-gaps",
+      "type": "Unisex Tee",
+      "category": "apparel",
+      "price": 28,
+      "etsy_url": null,
+      "printify_blueprint": 12,
+      "printify_product_id": null,
+      "colors": [],
+      "images": [],
+      "name": null
+    },
+    {
+      "id": "panel-gaps-hoodie",
+      "design": "panel-gaps",
+      "type": "Heavyweight Hoodie",
+      "category": "apparel",
+      "price": 52,
+      "etsy_url": null,
+      "printify_blueprint": null,
+      "printify_product_id": null,
+      "colors": [],
+      "images": [],
+      "name": null
+    },
+    {
+      "id": "panel-gaps-mug",
+      "design": "panel-gaps",
+      "type": "Ceramic Mug \u00b7 11/15 oz",
+      "category": "drinkware",
+      "price": 18,
+      "etsy_url": null,
+      "printify_blueprint": 478,
+      "printify_product_id": null,
+      "colors": [],
+      "images": [],
+      "name": null
+    },
+    {
+      "id": "panel-gaps-sticker",
+      "design": "panel-gaps",
+      "type": "Kiss-Cut Sticker",
+      "category": "stickers-magnets",
+      "price": 5,
+      "etsy_url": null,
+      "printify_blueprint": 400,
+      "printify_product_id": null,
+      "colors": [],
+      "images": [],
+      "name": null
+    },
+    {
+      "id": "panel-gaps-magnet",
+      "design": "panel-gaps",
+      "type": "Fridge Magnet",
+      "category": "stickers-magnets",
+      "price": 7,
+      "etsy_url": null,
+      "printify_blueprint": null,
+      "printify_product_id": null,
+      "colors": [],
+      "images": [],
+      "name": null
+    },
+    {
+      "id": "tc-original-tee",
+      "design": "tc-original",
+      "type": "Unisex Tee",
+      "category": "apparel",
+      "price": 28,
+      "etsy_url": null,
+      "printify_blueprint": 12,
+      "printify_product_id": null,
+      "colors": [],
+      "images": [],
+      "name": null
+    },
+    {
+      "id": "tc-original-hoodie",
+      "design": "tc-original",
+      "type": "Heavyweight Hoodie",
+      "category": "apparel",
+      "price": 52,
+      "etsy_url": null,
+      "printify_blueprint": null,
+      "printify_product_id": null,
+      "colors": [],
+      "images": [],
+      "name": null
+    },
+    {
+      "id": "tc-original-mug",
+      "design": "tc-original",
+      "type": "Ceramic Mug \u00b7 11/15 oz",
+      "category": "drinkware",
+      "price": 18,
+      "etsy_url": null,
+      "printify_blueprint": 478,
+      "printify_product_id": null,
+      "colors": [],
+      "images": [],
+      "name": null
+    },
+    {
+      "id": "tc-original-bottle",
+      "design": "tc-original",
+      "type": "Stainless Water Bottle",
+      "category": "drinkware",
+      "price": 28,
+      "etsy_url": null,
+      "printify_blueprint": 887,
+      "printify_product_id": null,
+      "colors": [],
+      "images": [],
+      "name": null
+    },
+    {
+      "id": "tc-original-sticker",
+      "design": "tc-original",
+      "type": "Kiss-Cut Sticker",
+      "category": "stickers-magnets",
+      "price": 5,
+      "etsy_url": null,
+      "printify_blueprint": 400,
+      "printify_product_id": null,
+      "colors": [],
+      "images": [],
+      "name": null
+    },
+    {
+      "id": "tc-original-magnet",
+      "design": "tc-original",
+      "type": "Fridge Magnet",
+      "category": "stickers-magnets",
+      "price": 7,
+      "etsy_url": null,
+      "printify_blueprint": null,
+      "printify_product_id": null,
+      "colors": [],
+      "images": [],
+      "name": null
+    },
+    {
+      "id": "garage-crew-tee",
+      "design": "garage-crew",
+      "type": "Unisex Tee",
+      "category": "apparel",
+      "price": 28,
+      "etsy_url": null,
+      "printify_blueprint": 12,
+      "printify_product_id": null,
+      "colors": [],
+      "images": [],
+      "name": null
+    },
+    {
+      "id": "garage-crew-hoodie",
+      "design": "garage-crew",
+      "type": "Heavyweight Hoodie",
+      "category": "apparel",
+      "price": 52,
+      "etsy_url": null,
+      "printify_blueprint": null,
+      "printify_product_id": null,
+      "colors": [],
+      "images": [],
+      "name": null
+    },
+    {
+      "id": "garage-crew-mug",
+      "design": "garage-crew",
+      "type": "Ceramic Mug \u00b7 11/15 oz",
+      "category": "drinkware",
+      "price": 18,
+      "etsy_url": null,
+      "printify_blueprint": 478,
+      "printify_product_id": null,
+      "colors": [],
+      "images": [],
+      "name": null
+    },
+    {
+      "id": "garage-crew-bottle",
+      "design": "garage-crew",
+      "type": "Stainless Water Bottle",
+      "category": "drinkware",
+      "price": 28,
+      "etsy_url": null,
+      "printify_blueprint": 887,
+      "printify_product_id": null,
+      "colors": [],
+      "images": [],
+      "name": null
+    },
+    {
+      "id": "garage-crew-sticker",
+      "design": "garage-crew",
+      "type": "Kiss-Cut Sticker",
+      "category": "stickers-magnets",
+      "price": 5,
+      "etsy_url": null,
+      "printify_blueprint": 400,
+      "printify_product_id": null,
+      "colors": [],
+      "images": [],
+      "name": null
+    },
+    {
+      "id": "garage-crew-magnet",
+      "design": "garage-crew",
+      "type": "Fridge Magnet",
+      "category": "stickers-magnets",
+      "price": 7,
+      "etsy_url": null,
+      "printify_blueprint": null,
+      "printify_product_id": null,
+      "colors": [],
+      "images": [],
+      "name": null
+    },
+    {
+      "id": "garage-crew-cards",
+      "design": "garage-crew",
+      "type": "Shop Cards \u00b7 10-pack",
+      "category": "cards-prints",
+      "price": 12,
+      "etsy_url": null,
+      "printify_blueprint": null,
+      "printify_product_id": null,
+      "colors": [],
+      "images": [],
+      "name": null
+    }
+  ]
+}

@@ -521,3 +521,20 @@ a.merch-art { display: block; }
 }
 .thumb-row .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .thumb-row .thumb.active { border-color: var(--red); }
+
+/* Merch: drop teaser card */
+.drop-card {
+  max-width: 560px; margin: 0 auto; padding: 56px 38px; text-align: center;
+  border: 2px dashed var(--line); border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--panel), var(--bg-2));
+}
+.drop-card .drop-title {
+  font-family: var(--font-head); font-weight: 700; text-transform: uppercase;
+  letter-spacing: .06em; font-size: clamp(1.5rem, 3.4vw, 2.3rem); margin-top: 14px;
+  background: linear-gradient(180deg, #fff, #cfd2d8 40%, #83868d 55%, #e8eaee 70%, #9a9da4);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.drop-card .drop-date {
+  font-family: var(--font-head); font-size: 1.15rem; letter-spacing: .18em;
+  color: var(--red-bright); margin-top: 10px;
+}

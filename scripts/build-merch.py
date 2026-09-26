@@ -225,8 +225,10 @@ def main():
                   f'checkout on <a href="{shop["etsy_shop_url"]}" target="_blank" rel="noopener">our Etsy shop</a>.</p>')
     else:
         tel = shop.get("phone", "")
+        digits = re.sub(r"\D", "", tel)[-10:]          # last 10 digits, however the catalog spells it
+        pretty = f"({digits[0:3]}) {digits[3:6]}-{digits[6:]}" if len(digits) == 10 else tel
         banner = (f'        <p class="merch-note">{html.escape(shop["checkout_note_when_closed"])}'
-                  + (f' <a href="tel:{tel}">({tel[2:5]}) {tel[5:8]}-{tel[8:]}</a> &middot; <a href="contact.html">Send a message</a>' if tel else ""))
+                  + (f' <a href="tel:{tel}">{pretty}</a> &middot; <a href="contact.html">Send a message</a>' if tel else ""))
         banner += '</p>'
 
     # ---- designs section
@@ -278,7 +280,19 @@ def main():
             '              </div>\n'
             '            </div>\n'
             '          </div>')
-    products_html = chips_html + '\n        <div class="grid grid-4 merch-grid">\n' + "\n".join(pcards) + '\n        </div>'
+    if cat["products"]:
+        products_html = chips_html + '\n        <div class="grid grid-4 merch-grid">\n' + "\n".join(pcards) + '\n        </div>'
+    else:
+        drop = shop.get("drop") or {}
+        title = html.escape(drop.get("title", "Next Merch Drop"))
+        date = html.escape(drop.get("date", "TBA"))
+        products_html = (
+            '        <div class="drop-card reveal">\n'
+            f'          <span class="badge badge-red">Save the date</span>\n'
+            f'          <div class="drop-title">{title}</div>\n'
+            f'          <div class="drop-date">{date}</div>\n'
+            '          <p class="muted small mt-1">The lineup lands here on drop day.</p>\n'
+            '        </div>')
 
     # ---- splice merch.html
     text = PAGE.read_text()
@@ -293,10 +307,28 @@ def main():
     # ---- detail pages
     for p in cat["products"]:
         (ROOT / f"merch-{p['id']}.html").write_text(detail_page(p, cat, designs, text))
-    stale = [f.name for f in ROOT.glob("merch-*.html")
+    STUB = """<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>AU Merch | Appearance Unlimited — Traverse City MI</title>
+  <link rel="canonical" href="https://appearance-unlimited.com/merch.html">
+  <meta http-equiv="refresh" content="0; url=merch.html">
+</head>
+<body>
+  <p>This product page has moved. <a href="merch.html">See the merch shop</a>.</p>
+  <script>location.replace('merch.html');</script>
+</body>
+</html>
+"""
+    stale = [f for f in ROOT.glob("merch-*.html")
              if f.name != "merch.html" and f.name[len("merch-"):-len(".html")] not in seen]
+    for f in stale:
+        f.write_text(STUB)
     if stale:
-        print(f"note: stale detail pages not in catalog (delete by hand): {stale}")
+        print(f"{len(stale)} stale detail page(s) stubbed to redirect at merch.html")
 
     live = sum(1 for p in cat["products"] if p.get("etsy_url"))
     with_mock = sum(1 for p in cat["products"] if p["images"])
