@@ -98,25 +98,29 @@ def main():
         # don't style, and cap it so a detail page stays readable.
         prod["description"] = clean_description(p.get("description") or "")
 
-        # `external.handle` is the Etsy listing URL Printify created. But its
-        # EXISTENCE does not mean the listing is buyable: Printify pushes to Etsy
-        # as a DRAFT, and a hidden (visible:false) product stays in Etsy's draft
-        # folder until a human activates it and pays Etsy's listing fee. A
-        # shopper hitting a draft listing sees "This item is unavailable".
+        # `external.handle` is the Etsy listing URL Printify created, but its
+        # EXISTENCE never meant the listing was buyable: Printify pushes to Etsy
+        # as a DRAFT, and a shopper hitting a draft sees "This item is unavailable".
         #
-        # So the buy button is gated on `visible`, not on the URL existing.
-        # visible:false is conclusive proof the listing is NOT live. visible:true
-        # is necessary but not sufficient — Etsy can still hold it as a draft —
-        # which is why activation stays a human step, verified by opening the URL.
+        # `etsy_live` is the authority, and only a human can set it. Activating a
+        # listing happens in Etsy's dashboard, and Printify does not learn about
+        # it — a product activated on Etsy still reports visible:false here — so
+        # Printify's flag is a stale proxy, not a source of truth. Whoever opened
+        # the listing and saw it live sets `etsy_live: true` in the catalog.
+        #
+        # Printify's `visible` is kept as a fallback for products published from
+        # the Printify side, and as a negative signal: without human confirmation,
+        # a hidden product is assumed to be an Etsy draft and demoted rather than
+        # advertised with a dead buy button.
         ext = p.get("external") or {}
         prod["printify_visible"] = bool(p.get("visible"))
         if ext.get("handle"):
             prod["etsy_listing_url"] = ext["handle"]      # recorded either way
-        if ext.get("handle") and p.get("visible"):
+
+        confirmed = prod.get("etsy_live")                 # None = never confirmed
+        if ext.get("handle") and (confirmed or (confirmed is None and p.get("visible"))):
             prod["etsy_url"] = ext["handle"]
-        elif not p.get("visible"):
-            # Hidden in Printify -> demote to "Drops Soon" rather than advertise
-            # a dead buy button.
+        else:
             prod["etsy_url"] = None
 
         # Per-size pricing: cheapest enabled variant is the headline price, and
@@ -163,8 +167,10 @@ def main():
         print(f"  {prod['id']}: {len(colors)} colors, {len(sizes)} sizes, "
               f"{len(stems)} mockups, {len(prod['description'])} para "
               f"({p['title'][:44]!r}), ${prod['price']}"
-              + (f"  etsy=LIVE {prod['etsy_url'][:40]}" if prod.get('etsy_url')
-                 else ("  etsy=DRAFT (hidden in Printify — activate on Etsy to go live)"
+              + (f"  etsy=LIVE{'(confirmed)' if prod.get('etsy_live') else ''} {prod['etsy_url'][:34]}"
+                 if prod.get('etsy_url')
+                 else ("  etsy=DRAFT (not confirmed live — activate on Etsy, then set "
+                       "etsy_live:true in the catalog)"
                        if prod.get('etsy_listing_url') else "  (no etsy listing)")))
 
     CAT.write_text(json.dumps(cat, indent=2) + "\n")
