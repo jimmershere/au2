@@ -21,7 +21,7 @@ it at runtime, e.g.:
 Then regenerate the pages:  python3 scripts/build-merch.py
 Read-only against Printify — it never creates, edits or publishes anything.
 """
-import argparse, io, json, os, sys, urllib.request
+import argparse, io, json, os, re, sys, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,6 +40,24 @@ def fetch_bytes(url):
     req = urllib.request.Request(url, headers={"User-Agent": "au2-merch/1.0", "Accept": "image/*"})
     with urllib.request.urlopen(req, timeout=120) as r:
         return r.read()
+
+
+def clean_description(raw, max_paras=4):
+    """Printify descriptions are HTML. Reduce to plain paragraphs.
+
+    Only the text is kept — the site's own CSS owns presentation, and passing
+    marketplace markup straight into the page is how you inherit someone else's
+    inline styles. Returns a list of paragraph strings.
+    """
+    import html as _html
+    # <br>, </p>, </li> mark paragraph breaks; bullets keep a leading marker.
+    t = re.sub(r"(?i)<\s*li[^>]*>", "\n• ", raw)
+    t = re.sub(r"(?i)<\s*(br|/p|/li|/ul|/div)\s*/?>", "\n", t)
+    t = re.sub(r"(?s)<[^>]+>", "", t)                 # strip remaining tags
+    t = _html.unescape(t)
+    paras = [re.sub(r"[ \t]+", " ", p).strip() for p in t.split("\n")]
+    paras = [p for p in paras if len(p) > 1]
+    return paras[:max_paras]
 
 def main():
     ap = argparse.ArgumentParser()
@@ -62,17 +80,39 @@ def main():
         enabled = [v for v in p["variants"] if v.get("is_enabled")]
         enabled_opt_ids = {oid for v in enabled for oid in v["options"]}
 
-        colors = []
+        colors, sizes = [], []
         for o in p.get("options", []):
-            if o.get("type") != "color":
-                continue
-            for v in o["values"]:
-                if v["id"] in enabled_opt_ids and v.get("colors"):
-                    colors.append({"name": v["title"], "hex": v["colors"][0]})
+            if o.get("type") == "color":
+                for v in o["values"]:
+                    if v["id"] in enabled_opt_ids and v.get("colors"):
+                        colors.append({"name": v["title"], "hex": v["colors"][0]})
+            elif o.get("type") == "size":
+                for v in o["values"]:
+                    if v["id"] in enabled_opt_ids:
+                        sizes.append(v["title"])
         prod["colors"] = colors
+        prod["sizes"] = sizes
 
-        if prod.get("price") is None and enabled:
-            prod["price"] = round(min(v["price"] for v in enabled) / 100)
+        # Printify's own listing copy, so the site and the marketplace agree.
+        # It ships as HTML; keep the text, drop the tags the page templates
+        # don't style, and cap it so a detail page stays readable.
+        prod["description"] = clean_description(p.get("description") or "")
+
+        # Whoever published to Etsy did so in the dashboard; `external.handle`
+        # is the resulting listing URL. Adopting it here is what flips the card
+        # from "Drops Soon" to a live buy button — never invent one.
+        ext = p.get("external") or {}
+        if ext.get("handle") and not prod.get("etsy_url"):
+            prod["etsy_url"] = ext["handle"]
+
+        # Per-size pricing: cheapest enabled variant is the headline price, and
+        # the spread is recorded so the page can say "from $X".
+        if enabled:
+            lo = min(v["price"] for v in enabled)
+            hi = max(v["price"] for v in enabled)
+            if prod.get("price") is None:
+                prod["price"] = round(lo / 100)
+            prod["price_range"] = [round(lo / 100), round(hi / 100)]
 
         # mockups: defaults first, then first occurrence of each camera position
         imgs = p.get("images", [])
@@ -106,8 +146,10 @@ def main():
             stems.append(stem)
         prod["images"] = stems
         touched += 1
-        print(f"  {prod['id']}: {len(colors)} colors, {len(stems)} mockups "
-              f"({p['title'][:50]!r}), price ${prod['price']}")
+        print(f"  {prod['id']}: {len(colors)} colors, {len(sizes)} sizes, "
+              f"{len(stems)} mockups, {len(prod['description'])} para "
+              f"({p['title'][:44]!r}), ${prod['price']}"
+              + (f"  etsy={prod['etsy_url'][:46]}" if prod.get('etsy_url') else "  (no etsy listing)"))
 
     CAT.write_text(json.dumps(cat, indent=2) + "\n")
     print(f"{touched} product(s) refreshed -> {CAT.relative_to(ROOT)}")

@@ -29,5 +29,46 @@
       "blurb": "The shop mantra, straight off the toolbox."
     }
   ],
-  "products": []
+  "products": [
+    {
+      "id": "au-illustration-bottle",
+      "design": "garage-crew",
+      "name": "Appearance Auto Care Illustration",
+      "type": "Stainless Steel Water Bottle \u00b7 12/18/32 oz",
+      "category": "drinkware",
+      "price": 28,
+      "etsy_url": "https://www.etsy.com/listing/4584376010/appearance-auto-care-illustration-water",
+      "printify_blueprint": 887,
+      "printify_product_id": "6ab93f01d8d3e53438097e40",
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#FFFFFF"
+        }
+      ],
+      "sizes": [
+        "12oz",
+        "18oz",
+        "32oz"
+      ],
+      "images": [
+        "products/au-illustration-bottle/img1",
+        "products/au-illustration-bottle/img2",
+        "products/au-illustration-bottle/img3",
+        "products/au-illustration-bottle/img4",
+        "products/au-illustration-bottle/img5",
+        "products/au-illustration-bottle/img6"
+      ],
+      "description": [
+        "This stainless steel water bottle brings durable, everyday function together with bold personality. The double-wall construction locks in temperature \u2014 keeping coffee warm or water chilled while preventing condensation. A grainy matte finish gives the surface a tactile, rugged feel that stands up to daily use and shows vibrant printed artwork clearly. The twist-on, BPA-free polypropylene lid is easy to grip and travel-friendly, and the bottle comes in three sizes to suit quick errands or long shifts. Made in South Korea with RoHS and Intertek certifications, it\u2019s built to last and stays true to its printed design even after regular handling.",
+        "Product features",
+        "- Double-wall insulation keeps drinks hot up to 12 hours and cold up to 24 hours",
+        "- Matte, grainy finish that resists fingerprints and enhances print clarity"
+      ],
+      "price_range": [
+        28,
+        28
+      ]
+    }
+  ]
 }
