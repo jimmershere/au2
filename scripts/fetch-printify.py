@@ -98,12 +98,26 @@ def main():
         # don't style, and cap it so a detail page stays readable.
         prod["description"] = clean_description(p.get("description") or "")
 
-        # Whoever published to Etsy did so in the dashboard; `external.handle`
-        # is the resulting listing URL. Adopting it here is what flips the card
-        # from "Drops Soon" to a live buy button — never invent one.
+        # `external.handle` is the Etsy listing URL Printify created. But its
+        # EXISTENCE does not mean the listing is buyable: Printify pushes to Etsy
+        # as a DRAFT, and a hidden (visible:false) product stays in Etsy's draft
+        # folder until a human activates it and pays Etsy's listing fee. A
+        # shopper hitting a draft listing sees "This item is unavailable".
+        #
+        # So the buy button is gated on `visible`, not on the URL existing.
+        # visible:false is conclusive proof the listing is NOT live. visible:true
+        # is necessary but not sufficient — Etsy can still hold it as a draft —
+        # which is why activation stays a human step, verified by opening the URL.
         ext = p.get("external") or {}
-        if ext.get("handle") and not prod.get("etsy_url"):
+        prod["printify_visible"] = bool(p.get("visible"))
+        if ext.get("handle"):
+            prod["etsy_listing_url"] = ext["handle"]      # recorded either way
+        if ext.get("handle") and p.get("visible"):
             prod["etsy_url"] = ext["handle"]
+        elif not p.get("visible"):
+            # Hidden in Printify -> demote to "Drops Soon" rather than advertise
+            # a dead buy button.
+            prod["etsy_url"] = None
 
         # Per-size pricing: cheapest enabled variant is the headline price, and
         # the spread is recorded so the page can say "from $X".
@@ -149,7 +163,9 @@ def main():
         print(f"  {prod['id']}: {len(colors)} colors, {len(sizes)} sizes, "
               f"{len(stems)} mockups, {len(prod['description'])} para "
               f"({p['title'][:44]!r}), ${prod['price']}"
-              + (f"  etsy={prod['etsy_url'][:46]}" if prod.get('etsy_url') else "  (no etsy listing)"))
+              + (f"  etsy=LIVE {prod['etsy_url'][:40]}" if prod.get('etsy_url')
+                 else ("  etsy=DRAFT (hidden in Printify — activate on Etsy to go live)"
+                       if prod.get('etsy_listing_url') else "  (no etsy listing)")))
 
     CAT.write_text(json.dumps(cat, indent=2) + "\n")
     print(f"{touched} product(s) refreshed -> {CAT.relative_to(ROOT)}")
