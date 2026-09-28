@@ -37,7 +37,7 @@
       "type": "Stainless Steel Water Bottle \u00b7 12/18/32 oz",
       "category": "drinkware",
       "price": 28,
-      "etsy_url": null,
+      "etsy_url": "https://www.etsy.com/listing/4584376010/appearance-auto-care-illustration-water",
       "printify_blueprint": 887,
       "printify_product_id": "6ab93f01d8d3e53438097e40",
       "colors": [
@@ -70,7 +70,8 @@
         28
       ],
       "printify_visible": false,
-      "etsy_listing_url": "https://www.etsy.com/listing/4584376010/appearance-auto-care-illustration-water"
+      "etsy_listing_url": "https://www.etsy.com/listing/4584376010/appearance-auto-care-illustration-water",
+      "etsy_live": true
     }
   ]
 }
