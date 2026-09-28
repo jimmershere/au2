@@ -506,6 +506,21 @@ body.nav-open .nav-toggle span::after { transform: rotate(-45deg); top: 0; }
   border: 2px solid rgba(255,255,255,.35); box-shadow: 0 0 0 1px rgba(0,0,0,.5) inset;
 }
 .color-dots-sm { margin-top: 2px; }
+
+/* ---------- Size options + Printify listing copy ---------- */
+.size-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; align-items: center; }
+.size-chip {
+  display: inline-block; padding: 6px 14px; border-radius: 999px;
+  border: 1px solid var(--chrome-lo); color: var(--chrome-hi);
+  font-family: var(--font-head); font-size: .82rem; letter-spacing: .08em;
+  text-transform: uppercase; background: rgba(255,255,255,.04);
+}
+.product-desc { margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--line); }
+.product-desc h2 { font-size: 1.05rem; letter-spacing: .1em; text-transform: uppercase;
+                   color: var(--chrome-mid); margin-bottom: 10px; }
+.product-desc p { color: var(--muted); font-size: .94rem; line-height: 1.65; margin-bottom: 10px; }
+.product-desc p:last-child { margin-bottom: 0; }
+
 .color-dots-sm .dot { width: 14px; height: 14px; border-width: 1px; }
 .dot-more { font-size: .72rem; color: var(--muted); letter-spacing: .04em; }
 .merch-name a { color: inherit; text-decoration: none; }

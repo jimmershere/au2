@@ -74,9 +74,45 @@ def color_dots(prod, indent):
     dots = "\n".join(
         f'{i}  <span class="dot" style="background:{c["hex"]}" title="{html.escape(c["name"], quote=True)}"></span>'
         for c in prod["colors"])
-    return (f'{i}<div class="color-dots" aria-label="Available colors">\n{dots}\n{i}</div>\n'
-            f'{i}<p class="muted small">Available in {len(prod["colors"])} colors — '
-            f'pick yours at checkout.</p>')
+    n = len(prod["colors"])
+    # One colourway is a fact about the product, not a choice to present.
+    label = ("Finish" if n == 1 else "Available colors")
+    note = (f'{i}<p class="muted small">{html.escape(prod["colors"][0]["name"])} only.</p>'
+            if n == 1 else
+            f'{i}<p class="muted small">Available in {n} colors — pick yours at checkout.</p>')
+    return (f'{i}<div class="color-dots" aria-label="{label}">\n{dots}\n{i}</div>\n{note}')
+
+
+def size_chips(prod, indent):
+    """Render the enabled size options as static chips.
+
+    Deliberately not a <select>: until checkout lives on this site there is
+    nothing to submit, and a control that looks interactive but isn't is worse
+    than a plain list. Size is chosen on the checkout destination.
+    """
+    sizes = prod.get("sizes") or []
+    if not sizes:
+        return ""
+    i = " " * indent
+    chips = "\n".join(
+        f'{i}  <span class="size-chip">{html.escape(s)}</span>' for s in sizes)
+    rng = prod.get("price_range") or []
+    price_note = ""
+    if len(rng) == 2 and rng[0] != rng[1]:
+        price_note = f' — ${rng[0]:g}–${rng[1]:g} by size'
+    return (f'{i}<div class="size-row" aria-label="Available sizes">\n{chips}\n{i}</div>\n'
+            f'{i}<p class="muted small">{len(sizes)} sizes{price_note}.</p>')
+
+
+def description_block(prod, indent):
+    """Printify's own listing copy, so the site and the marketplace agree."""
+    paras = prod.get("description") or []
+    if not paras:
+        return ""
+    i = " " * indent
+    body = "\n".join(f'{i}  <p>{html.escape(p)}</p>' for p in paras)
+    return (f'{i}<div class="product-desc">\n'
+            f'{i}  <h2 class="h4">Details</h2>\n{body}\n{i}</div>')
 
 # ---------------------------------------------------------------- detail page
 def detail_page(prod, cat, designs, skeleton):
@@ -100,7 +136,13 @@ def detail_page(prod, cat, designs, skeleton):
 
     dots = color_dots(prod, 12)
     tagline = html.escape(d["tagline"]) if d else "Official Appearance Unlimited gear."
-    price = f'${prod["price"]:g}' if prod["price"] else "—"
+    rng = prod.get("price_range") or []
+    if prod["price"] and len(rng) == 2 and rng[0] != rng[1]:
+        price = f'From ${prod["price"]:g}'          # per-size pricing
+    else:
+        price = f'${prod["price"]:g}' if prod["price"] else "—"
+    sizes_html = size_chips(prod, 12)
+    desc_html = description_block(prod, 12)
 
     related = [q for q in cat["products"] if q["id"] != prod["id"] and
                (q["design"] == prod["design"] if prod["design"] else q["category"] == prod["category"])][:3]
@@ -146,6 +188,7 @@ def detail_page(prod, cat, designs, skeleton):
             <p class="lead">{tagline}</p>
             <p class="price price-lg mt-1">{price}</p>
 {dots}
+{sizes_html}
             <div class="svc-cta-row">
               {buy_button(prod, big=True)}
               <a class="card-link" href="contact.html">Questions? Talk to the shop &raquo;</a>
@@ -155,6 +198,7 @@ def detail_page(prod, cat, designs, skeleton):
               <li>Checkout &amp; buyer protection on Etsy</li>
               <li>Original artwork by the Appearance Unlimited crew</li>
             </ul>
+{desc_html}
           </div>
         </div>
       </div>
@@ -220,9 +264,15 @@ def main():
             if not stem_exists(s): fail(f"{p['id']}: missing image files for stem {s}")
 
     # ---- banner
+    # The pre-drop note must not survive the first live product: a "drops soon,
+    # call the shop" line above a working Buy button reads as broken.
+    live = [p for p in cat["products"] if p.get("etsy_url")]
     if shop.get("etsy_shop_url"):
         banner = (f'        <p class="merch-note">Printed on demand &middot; ships to your door &middot; '
                   f'checkout on <a href="{shop["etsy_shop_url"]}" target="_blank" rel="noopener">our Etsy shop</a>.</p>')
+    elif live:
+        banner = ('        <p class="merch-note">Printed on demand &middot; ships to your door &middot; '
+                  'checkout &amp; buyer protection on Etsy.</p>')
     else:
         tel = shop.get("phone", "")
         digits = re.sub(r"\D", "", tel)[-10:]          # last 10 digits, however the catalog spells it
@@ -296,9 +346,17 @@ def main():
 
     # ---- splice merch.html
     text = PAGE.read_text()
+    # `designs` is optional: the artwork section was retired from merch.html once
+    # real products carried their own imagery. The designs[] data itself is still
+    # required — detail pages read taglines from it — so this skips a missing
+    # section rather than treating it as a catalog error.
+    OPTIONAL = {"designs"}
     for marker, block in (("banner", banner), ("designs", designs_html), ("products", products_html)):
         start, end = f"<!-- merch:{marker}:start -->", f"<!-- merch:{marker}:end -->"
-        if start not in text or end not in text: fail(f"marker {marker} missing in merch.html")
+        if start not in text or end not in text:
+            if marker in OPTIONAL:
+                continue
+            fail(f"marker {marker} missing in merch.html")
         text = re.sub(re.escape(start) + r".*?" + re.escape(end),
                       lambda _m, b=block, s=start, e=end: s + "\n" + b + "\n        " + e,
                       text, flags=re.S)

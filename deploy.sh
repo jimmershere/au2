@@ -22,7 +22,9 @@ APPLY=0
 EXCLUDES=(--exclude 'README.md' --exclude '_template.html' --exclude 'start-server.sh'
           --exclude 'deploy.sh' --exclude '.git' --exclude 'assets/img/au2.png'
           --exclude 'scripts' --exclude 'assets/data'
-          --exclude 'assets/img/merch/src-*.png')
+          --exclude 'assets/img/merch/src-*.png'
+          # Internal only — these must never reach the public docroot.
+          --exclude 'docs' --exclude '.claude' --exclude '__pycache__')
 
 echo "==> $SRC  ->  $HOST:$DEST"
 if [[ $APPLY -eq 0 ]]; then
@@ -40,7 +42,7 @@ ssh "$HOST" "chown -R www-data:www-data $DEST && find $DEST -type d -exec chmod 
 
 echo
 echo "==> verifying over HTTPS"
-for p in index services about portfolio merch merch-au-car-logo-mug; do
+for p in index services about portfolio merch merch-au-illustration-bottle; do
   code=$(curl -s -o /dev/null -w '%{http_code}' "https://appearance-unlimited.com/$p.html")
   n=$(curl -s "https://appearance-unlimited.com/$p.html" | grep -c has-photo || true)
   m=$(curl -s "https://appearance-unlimited.com/$p.html" | grep -c merch-card || true)
