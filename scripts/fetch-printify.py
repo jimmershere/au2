@@ -117,8 +117,24 @@ def main():
         if ext.get("handle"):
             prod["etsy_listing_url"] = ext["handle"]      # recorded either way
 
+        # Printify's handle has now been wrong in BOTH directions:
+        #   false negative — visible:false on a listing that is live (the flag exists for this)
+        #   false positive — a handle pointing at a DELETED listing. The AU2 bottle
+        #     kept reporting 4584376010 long after that listing 404'd, so the site
+        #     shipped a buy button onto "Sorry, this item is unavailable".
+        # Etsy bot-blocks scripted requests (curl gets the same Cloudflare page for
+        # a live listing and a dead one), so this cannot be verified automatically —
+        # only a human with a browser can tell them apart. Hence `etsy_live`:
+        #   true      -> trust Printify's handle
+        #   "<url>"   -> use THIS url instead; Printify's handle is wrong or stale
+        #   false     -> known not buyable; show "Drops Soon" whatever Printify says
+        #   unset     -> fall back to Printify's `visible`
         confirmed = prod.get("etsy_live")                 # None = never confirmed
-        if ext.get("handle") and (confirmed or (confirmed is None and p.get("visible"))):
+        if isinstance(confirmed, str) and confirmed.startswith("http"):
+            prod["etsy_url"] = confirmed                  # human-verified, wins outright
+        elif confirmed is False:
+            prod["etsy_url"] = None
+        elif ext.get("handle") and (confirmed or (confirmed is None and p.get("visible"))):
             prod["etsy_url"] = ext["handle"]
         else:
             prod["etsy_url"] = None
@@ -169,9 +185,11 @@ def main():
               f"({p['title'][:44]!r}), ${prod['price']}"
               + (f"  etsy=LIVE{'(confirmed)' if prod.get('etsy_live') else ''} {prod['etsy_url'][:34]}"
                  if prod.get('etsy_url')
-                 else ("  etsy=DRAFT (not confirmed live — activate on Etsy, then set "
-                       "etsy_live:true in the catalog)"
-                       if prod.get('etsy_listing_url') else "  (no etsy listing)")))
+                 else ("  etsy=NOT LIVE (etsy_live:false — listing dead or unpublished)"
+                       if prod.get('etsy_live') is False
+                       else ("  etsy=DRAFT (not confirmed live — activate on Etsy, then set "
+                             "etsy_live:true in the catalog)"
+                             if prod.get('etsy_listing_url') else "  (no etsy listing)"))))
 
     CAT.write_text(json.dumps(cat, indent=2) + "\n")
     print(f"{touched} product(s) refreshed -> {CAT.relative_to(ROOT)}")
