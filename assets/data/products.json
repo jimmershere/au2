@@ -31,6 +31,649 @@
   ],
   "products": [
     {
+      "id": "au-redneck-locals-tee",
+      "design": null,
+      "name": "Cold Beer. Good Friends. Fast Cars.",
+      "type": "Unisex Tee \u00b7 S\u20135XL",
+      "category": "apparel",
+      "price": 32,
+      "etsy_url": "https://www.etsy.com/listing/4584983664/cold-beer-good-friends-fast-cars-tee",
+      "etsy_live": true,
+      "printify_blueprint": 6,
+      "printify_product_id": "6abbb54a7f40aaa14a064873",
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "Black",
+          "hex": "#000000"
+        },
+        {
+          "name": "Sport Grey",
+          "hex": "#CACACA"
+        },
+        {
+          "name": "Light Blue",
+          "hex": "#d6e6f7"
+        },
+        {
+          "name": "Navy",
+          "hex": "#1a2237"
+        },
+        {
+          "name": "Light Pink",
+          "hex": "#FEE0EB"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "images": [
+        "products/au-redneck-locals-tee/img1",
+        "products/au-redneck-locals-tee/img2",
+        "products/au-redneck-locals-tee/img3",
+        "products/au-redneck-locals-tee/img4",
+        "products/au-redneck-locals-tee/img5"
+      ],
+      "description": [
+        "Appearance Unlimited. Cars, trucks, boats, freedom. Fix it, paint it, drive it, repeat. Autobody and restoration, Traverse City Michigan."
+      ],
+      "printify_visible": false,
+      "etsy_listing_url": "https://www.etsy.com/listing/4584983664/cold-beer-good-friends-fast-cars-tee",
+      "price_range": [
+        32,
+        32
+      ]
+    },
+    {
+      "id": "au-ice-stone-crossover-tee",
+      "design": null,
+      "name": "We Deal In Lead \u2014 Ice & Stone Crossover",
+      "type": "Unisex Tee \u00b7 S\u20135XL",
+      "category": "apparel",
+      "price": 36,
+      "etsy_url": "https://www.etsy.com/listing/4584976043/ice-snow-we-deal-in-lead-tee-vintage",
+      "etsy_live": true,
+      "printify_blueprint": 6,
+      "printify_product_id": "6abbaf927f40aaa14a06459b",
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "Black",
+          "hex": "#000000"
+        },
+        {
+          "name": "Sport Grey",
+          "hex": "#CACACA"
+        },
+        {
+          "name": "Light Blue",
+          "hex": "#d6e6f7"
+        },
+        {
+          "name": "Navy",
+          "hex": "#1a2237"
+        },
+        {
+          "name": "Light Pink",
+          "hex": "#FEE0EB"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "images": [
+        "products/au-ice-stone-crossover-tee/img1",
+        "products/au-ice-stone-crossover-tee/img2",
+        "products/au-ice-stone-crossover-tee/img3",
+        "products/au-ice-stone-crossover-tee/img4",
+        "products/au-ice-stone-crossover-tee/img5"
+      ],
+      "description": [
+        "This tee carries a weathered, outlaw energy\u2014bold graphics at the chest, muted earth tones and hand-drawn details that read like a vintage concert poster. It feels like a backroad ride at dusk: rough edges, steady confidence, and a wink of dark humor in the slogan. Wear it to show allegiance to the scene\u2014layer under a worn jacket, toss it on after a show, or let it be your go-to for low-key nights where attitude says more than words. The classic crew cut and midweight cotton let the print sit front-and-center while staying comfortable enough for long drives, late nights, and weekend hangs.",
+        "Product features",
+        "- 100% cotton (solid colors) \u2014 midweight 180 g/m\u00b2 for year-round comfort",
+        "- Tubular knit (no side seams) for cleaner drape and reduced waste"
+      ],
+      "printify_visible": false,
+      "etsy_listing_url": "https://www.etsy.com/listing/4584976043/ice-snow-we-deal-in-lead-tee-vintage",
+      "price_range": [
+        36,
+        36
+      ]
+    },
+    {
+      "id": "au-redneck-locals-hoodie",
+      "design": null,
+      "name": "Cold Beer. Good Friends. Fast Cars.",
+      "type": "Heavy Blend Hoodie \u00b7 S\u20135XL",
+      "category": "apparel",
+      "price": 55,
+      "etsy_url": "https://www.etsy.com/listing/4584977803/cold-beer-good-friends-fast-cars-hoodie",
+      "etsy_live": true,
+      "printify_blueprint": 77,
+      "printify_product_id": "6abbb5d0c15fa8d7100b420a",
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "Black",
+          "hex": "#000000"
+        },
+        {
+          "name": "Sport Grey",
+          "hex": "#CACACA"
+        },
+        {
+          "name": "Light Blue",
+          "hex": "#d6e6f7"
+        },
+        {
+          "name": "Navy",
+          "hex": "#1a2237"
+        },
+        {
+          "name": "Light Pink",
+          "hex": "#FEE0EB"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "images": [
+        "products/au-redneck-locals-hoodie/img1",
+        "products/au-redneck-locals-hoodie/img2",
+        "products/au-redneck-locals-hoodie/img3",
+        "products/au-redneck-locals-hoodie/img4",
+        "products/au-redneck-locals-hoodie/img5"
+      ],
+      "description": [
+        "Appearance Unlimited. Cars, trucks, boats, freedom. Fix it, paint it, drive it, repeat. Autobody and restoration, Traverse City Michigan."
+      ],
+      "printify_visible": false,
+      "etsy_listing_url": "https://www.etsy.com/listing/4584977803/cold-beer-good-friends-fast-cars-hoodie",
+      "price_range": [
+        55,
+        55
+      ]
+    },
+    {
+      "id": "au-ice-stone-crossover-hoodie",
+      "design": null,
+      "name": "We Deal In Lead \u2014 Ice & Stone Crossover",
+      "type": "Heavy Blend Hoodie \u00b7 S\u20135XL",
+      "category": "apparel",
+      "price": 60,
+      "etsy_url": "https://www.etsy.com/listing/4584982684/ice-stone-x-appearance-unlimited-we-deal",
+      "etsy_live": true,
+      "printify_blueprint": 77,
+      "printify_product_id": "6abbb0057da2c21eb8097c1c",
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "Black",
+          "hex": "#000000"
+        },
+        {
+          "name": "Sport Grey",
+          "hex": "#CACACA"
+        },
+        {
+          "name": "Light Blue",
+          "hex": "#d6e6f7"
+        },
+        {
+          "name": "Navy",
+          "hex": "#1a2237"
+        },
+        {
+          "name": "Light Pink",
+          "hex": "#FEE0EB"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "images": [
+        "products/au-ice-stone-crossover-hoodie/img1",
+        "products/au-ice-stone-crossover-hoodie/img2",
+        "products/au-ice-stone-crossover-hoodie/img3",
+        "products/au-ice-stone-crossover-hoodie/img4",
+        "products/au-ice-stone-crossover-hoodie/img5"
+      ],
+      "description": [
+        "Limited-edition crossover. Ice and Stone is Jimmer's own design shop in Traverse City, Michigan; Appearance Unlimited is the autobody and restoration shop. This is the first drop where both names land on the same shirt. Printed on demand, limited run."
+      ],
+      "printify_visible": false,
+      "etsy_listing_url": "https://www.etsy.com/listing/4584982684/ice-stone-x-appearance-unlimited-we-deal",
+      "price_range": [
+        60,
+        60
+      ]
+    },
+    {
+      "id": "au-panel-gaps-tee",
+      "design": "panel-gaps",
+      "name": "Panel Gaps You Could Set A Watch To",
+      "type": "Unisex Tee \u00b7 S\u20135XL",
+      "category": "apparel",
+      "price": 32,
+      "etsy_url": "https://www.etsy.com/listing/4584624704/panel-gaps-you-could-set-a-watch-to-tee",
+      "etsy_live": true,
+      "printify_blueprint": 6,
+      "printify_product_id": "6abad1d75a05b994680f36fb",
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "Black",
+          "hex": "#000000"
+        },
+        {
+          "name": "Sport Grey",
+          "hex": "#CACACA"
+        },
+        {
+          "name": "Light Blue",
+          "hex": "#d6e6f7"
+        },
+        {
+          "name": "Navy",
+          "hex": "#1a2237"
+        },
+        {
+          "name": "Light Pink",
+          "hex": "#FEE0EB"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "images": [
+        "products/au-panel-gaps-tee/img1",
+        "products/au-panel-gaps-tee/img2",
+        "products/au-panel-gaps-tee/img3",
+        "products/au-panel-gaps-tee/img4",
+        "products/au-panel-gaps-tee/img5"
+      ],
+      "description": [
+        "Appearance Unlimited. Panel gaps you could set a watch to. Autobody restoration, Traverse City MI."
+      ],
+      "printify_visible": false,
+      "etsy_listing_url": "https://www.etsy.com/listing/4584624704/panel-gaps-you-could-set-a-watch-to-tee",
+      "price_range": [
+        32,
+        32
+      ]
+    },
+    {
+      "id": "au-panel-gaps-hoodie",
+      "design": "panel-gaps",
+      "name": "Panel Gaps You Could Set A Watch To",
+      "type": "Heavy Blend Hoodie \u00b7 S\u20135XL",
+      "category": "apparel",
+      "price": 55,
+      "etsy_url": "https://www.etsy.com/listing/4584624652/panel-gaps-hoodie",
+      "etsy_live": true,
+      "printify_blueprint": 77,
+      "printify_product_id": "6abad3167ad9f15eac0a0a17",
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "Black",
+          "hex": "#000000"
+        },
+        {
+          "name": "Sport Grey",
+          "hex": "#CACACA"
+        },
+        {
+          "name": "Light Blue",
+          "hex": "#d6e6f7"
+        },
+        {
+          "name": "Navy",
+          "hex": "#1a2237"
+        },
+        {
+          "name": "Light Pink",
+          "hex": "#FEE0EB"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "images": [
+        "products/au-panel-gaps-hoodie/img1",
+        "products/au-panel-gaps-hoodie/img2",
+        "products/au-panel-gaps-hoodie/img3",
+        "products/au-panel-gaps-hoodie/img4",
+        "products/au-panel-gaps-hoodie/img5"
+      ],
+      "description": [
+        "Panel Gaps Hoodie"
+      ],
+      "printify_visible": false,
+      "etsy_listing_url": "https://www.etsy.com/listing/4584624652/panel-gaps-hoodie",
+      "price_range": [
+        55,
+        55
+      ]
+    },
+    {
+      "id": "au-carbureted-tee",
+      "design": "garage-crew",
+      "name": "Carbureted and Uncivilized",
+      "type": "Unisex Tee \u00b7 S\u20135XL",
+      "category": "apparel",
+      "price": 32,
+      "etsy_url": "https://www.etsy.com/listing/4584624594/carbureted-and-uncivilized-tee",
+      "etsy_live": true,
+      "printify_blueprint": 6,
+      "printify_product_id": "6abad3277ad9f15eac0a0a2c",
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "Black",
+          "hex": "#000000"
+        },
+        {
+          "name": "Sport Grey",
+          "hex": "#CACACA"
+        },
+        {
+          "name": "Light Blue",
+          "hex": "#d6e6f7"
+        },
+        {
+          "name": "Navy",
+          "hex": "#1a2237"
+        },
+        {
+          "name": "Light Pink",
+          "hex": "#FEE0EB"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "images": [
+        "products/au-carbureted-tee/img1",
+        "products/au-carbureted-tee/img2",
+        "products/au-carbureted-tee/img3",
+        "products/au-carbureted-tee/img4",
+        "products/au-carbureted-tee/img5"
+      ],
+      "description": [
+        "Carbureted and Uncivilized Tee"
+      ],
+      "printify_visible": false,
+      "etsy_listing_url": "https://www.etsy.com/listing/4584624594/carbureted-and-uncivilized-tee",
+      "price_range": [
+        32,
+        32
+      ]
+    },
+    {
+      "id": "au-carbureted-hoodie",
+      "design": "garage-crew",
+      "name": "Carbureted and Uncivilized",
+      "type": "Heavy Blend Hoodie \u00b7 S\u20135XL",
+      "category": "apparel",
+      "price": 55,
+      "etsy_url": "https://www.etsy.com/listing/4584616905/carbureted-and-uncivilized-hoodie",
+      "etsy_live": true,
+      "printify_blueprint": 77,
+      "printify_product_id": "6abad34e7ad9f15eac0a0a53",
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "Black",
+          "hex": "#000000"
+        },
+        {
+          "name": "Sport Grey",
+          "hex": "#CACACA"
+        },
+        {
+          "name": "Light Blue",
+          "hex": "#d6e6f7"
+        },
+        {
+          "name": "Navy",
+          "hex": "#1a2237"
+        },
+        {
+          "name": "Light Pink",
+          "hex": "#FEE0EB"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "images": [
+        "products/au-carbureted-hoodie/img1",
+        "products/au-carbureted-hoodie/img2",
+        "products/au-carbureted-hoodie/img3",
+        "products/au-carbureted-hoodie/img4",
+        "products/au-carbureted-hoodie/img5"
+      ],
+      "description": [
+        "Carbureted and Uncivilized Hoodie"
+      ],
+      "printify_visible": false,
+      "etsy_listing_url": "https://www.etsy.com/listing/4584616905/carbureted-and-uncivilized-hoodie",
+      "price_range": [
+        55,
+        55
+      ]
+    },
+    {
+      "id": "au-straight-enough-tee",
+      "design": "garage-crew",
+      "name": "Straight Enough To Argue With",
+      "type": "Unisex Tee \u00b7 S\u20135XL",
+      "category": "apparel",
+      "price": 32,
+      "etsy_url": "https://www.etsy.com/listing/4584616859/straight-enough-to-argue-with-tee",
+      "etsy_live": true,
+      "printify_blueprint": 6,
+      "printify_product_id": "6abad3624dba77d2b40efe01",
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "Black",
+          "hex": "#000000"
+        },
+        {
+          "name": "Sport Grey",
+          "hex": "#CACACA"
+        },
+        {
+          "name": "Light Blue",
+          "hex": "#d6e6f7"
+        },
+        {
+          "name": "Navy",
+          "hex": "#1a2237"
+        },
+        {
+          "name": "Light Pink",
+          "hex": "#FEE0EB"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "images": [
+        "products/au-straight-enough-tee/img1",
+        "products/au-straight-enough-tee/img2",
+        "products/au-straight-enough-tee/img3",
+        "products/au-straight-enough-tee/img4",
+        "products/au-straight-enough-tee/img5"
+      ],
+      "description": [
+        "Straight Enough To Argue With Tee"
+      ],
+      "printify_visible": false,
+      "etsy_listing_url": "https://www.etsy.com/listing/4584616859/straight-enough-to-argue-with-tee",
+      "price_range": [
+        32,
+        32
+      ]
+    },
+    {
+      "id": "au-straight-enough-hoodie",
+      "design": "garage-crew",
+      "name": "Straight Enough To Argue With",
+      "type": "Heavy Blend Hoodie \u00b7 S\u20135XL",
+      "category": "apparel",
+      "price": 55,
+      "etsy_url": "https://www.etsy.com/listing/4584624424/straight-enough-to-argue-with-hoodie",
+      "etsy_live": true,
+      "printify_blueprint": 77,
+      "printify_product_id": "6abad36a94b2a9796d0773c5",
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#ffffff"
+        },
+        {
+          "name": "Black",
+          "hex": "#000000"
+        },
+        {
+          "name": "Sport Grey",
+          "hex": "#CACACA"
+        },
+        {
+          "name": "Light Blue",
+          "hex": "#d6e6f7"
+        },
+        {
+          "name": "Navy",
+          "hex": "#1a2237"
+        },
+        {
+          "name": "Light Pink",
+          "hex": "#FEE0EB"
+        }
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "2XL",
+        "3XL",
+        "4XL",
+        "5XL"
+      ],
+      "images": [
+        "products/au-straight-enough-hoodie/img1",
+        "products/au-straight-enough-hoodie/img2",
+        "products/au-straight-enough-hoodie/img3",
+        "products/au-straight-enough-hoodie/img4",
+        "products/au-straight-enough-hoodie/img5"
+      ],
+      "description": [
+        "Straight Enough To Argue With Hoodie"
+      ],
+      "printify_visible": false,
+      "etsy_listing_url": "https://www.etsy.com/listing/4584624424/straight-enough-to-argue-with-hoodie",
+      "price_range": [
+        55,
+        55
+      ]
+    },
+    {
       "id": "au-illustration-bottle",
       "design": "garage-crew",
       "name": "Appearance Auto Care Illustration",
@@ -56,8 +699,7 @@
         "products/au-illustration-bottle/img2",
         "products/au-illustration-bottle/img3",
         "products/au-illustration-bottle/img4",
-        "products/au-illustration-bottle/img5",
-        "products/au-illustration-bottle/img6"
+        "products/au-illustration-bottle/img5"
       ],
       "description": [
         "This stainless steel water bottle brings durable, everyday function together with bold personality. The double-wall construction locks in temperature \u2014 keeping coffee warm or water chilled while preventing condensation. A grainy matte finish gives the surface a tactile, rugged feel that stands up to daily use and shows vibrant printed artwork clearly. The twist-on, BPA-free polypropylene lid is easy to grip and travel-friendly, and the bottle comes in three sizes to suit quick errands or long shifts. Made in South Korea with RoHS and Intertek certifications, it\u2019s built to last and stays true to its printed design even after regular handling.",

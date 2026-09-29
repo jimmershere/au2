@@ -508,6 +508,14 @@ body.nav-open .nav-toggle span::after { transform: rotate(-45deg); top: 0; }
 .color-dots-sm { margin-top: 2px; }
 
 /* ---------- Size options + Printify listing copy ---------- */
+/* ---------- Merch drop note (hero) ---------- */
+.drop-note {
+  color: var(--muted); font-size: .96rem; line-height: 1.6; max-width: 62ch;
+  border-left: 3px solid var(--red); padding-left: 14px;
+}
+.drop-note .badge { margin-right: 8px; vertical-align: 2px; }
+.drop-note strong { color: var(--chrome-hi); font-weight: 600; }
+
 .size-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; align-items: center; }
 .size-chip {
   display: inline-block; padding: 6px 14px; border-radius: 999px;
