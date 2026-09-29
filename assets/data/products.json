@@ -87,7 +87,7 @@
       "description": [
         "Appearance Unlimited. Cars, trucks, boats, freedom. Fix it, paint it, drive it, repeat. Autobody and restoration, Traverse City Michigan."
       ],
-      "printify_visible": false,
+      "printify_visible": true,
       "etsy_listing_url": "https://www.etsy.com/listing/4584983664/cold-beer-good-friends-fast-cars-tee",
       "price_range": [
         32,
@@ -101,8 +101,8 @@
       "type": "Unisex Tee \u00b7 S\u20135XL",
       "category": "apparel",
       "price": 36,
-      "etsy_url": "https://www.etsy.com/listing/4584976043/ice-snow-we-deal-in-lead-tee-vintage",
-      "etsy_live": true,
+      "etsy_url": null,
+      "etsy_live": false,
       "printify_blueprint": 6,
       "printify_product_id": "6abbaf927f40aaa14a06459b",
       "colors": [
@@ -155,7 +155,7 @@
         "- Tubular knit (no side seams) for cleaner drape and reduced waste"
       ],
       "printify_visible": false,
-      "etsy_listing_url": "https://www.etsy.com/listing/4584976043/ice-snow-we-deal-in-lead-tee-vintage",
+      "etsy_listing_url": "https://www.etsy.com/listing/4584976043/ice-stone-we-deal-in-lead-tee-vintage",
       "price_range": [
         36,
         36
@@ -218,7 +218,7 @@
       "description": [
         "Appearance Unlimited. Cars, trucks, boats, freedom. Fix it, paint it, drive it, repeat. Autobody and restoration, Traverse City Michigan."
       ],
-      "printify_visible": false,
+      "printify_visible": true,
       "etsy_listing_url": "https://www.etsy.com/listing/4584977803/cold-beer-good-friends-fast-cars-hoodie",
       "price_range": [
         55,
@@ -282,7 +282,7 @@
       "description": [
         "Limited-edition crossover. Ice and Stone is Jimmer's own design shop in Traverse City, Michigan; Appearance Unlimited is the autobody and restoration shop. This is the first drop where both names land on the same shirt. Printed on demand, limited run."
       ],
-      "printify_visible": false,
+      "printify_visible": true,
       "etsy_listing_url": "https://www.etsy.com/listing/4584982684/ice-stone-x-appearance-unlimited-we-deal",
       "price_range": [
         60,
@@ -346,7 +346,7 @@
       "description": [
         "Appearance Unlimited. Panel gaps you could set a watch to. Autobody restoration, Traverse City MI."
       ],
-      "printify_visible": false,
+      "printify_visible": true,
       "etsy_listing_url": "https://www.etsy.com/listing/4584624704/panel-gaps-you-could-set-a-watch-to-tee",
       "price_range": [
         32,
@@ -410,7 +410,7 @@
       "description": [
         "Panel Gaps Hoodie"
       ],
-      "printify_visible": false,
+      "printify_visible": true,
       "etsy_listing_url": "https://www.etsy.com/listing/4584624652/panel-gaps-hoodie",
       "price_range": [
         55,
@@ -474,7 +474,7 @@
       "description": [
         "Carbureted and Uncivilized Tee"
       ],
-      "printify_visible": false,
+      "printify_visible": true,
       "etsy_listing_url": "https://www.etsy.com/listing/4584624594/carbureted-and-uncivilized-tee",
       "price_range": [
         32,
@@ -538,7 +538,7 @@
       "description": [
         "Carbureted and Uncivilized Hoodie"
       ],
-      "printify_visible": false,
+      "printify_visible": true,
       "etsy_listing_url": "https://www.etsy.com/listing/4584616905/carbureted-and-uncivilized-hoodie",
       "price_range": [
         55,
@@ -602,7 +602,7 @@
       "description": [
         "Straight Enough To Argue With Tee"
       ],
-      "printify_visible": false,
+      "printify_visible": true,
       "etsy_listing_url": "https://www.etsy.com/listing/4584616859/straight-enough-to-argue-with-tee",
       "price_range": [
         32,
@@ -666,7 +666,7 @@
       "description": [
         "Straight Enough To Argue With Hoodie"
       ],
-      "printify_visible": false,
+      "printify_visible": true,
       "etsy_listing_url": "https://www.etsy.com/listing/4584624424/straight-enough-to-argue-with-hoodie",
       "price_range": [
         55,
@@ -680,7 +680,7 @@
       "type": "Stainless Steel Water Bottle \u00b7 12/18/32 oz",
       "category": "drinkware",
       "price": 28,
-      "etsy_url": null,
+      "etsy_url": "https://www.etsy.com/listing/4584376010/appearance-auto-care-illustration-water",
       "printify_blueprint": 887,
       "printify_product_id": "6ab93f01d8d3e53438097e40",
       "colors": [
@@ -711,9 +711,9 @@
         28,
         28
       ],
-      "printify_visible": false,
+      "printify_visible": true,
       "etsy_listing_url": "https://www.etsy.com/listing/4584376010/appearance-auto-care-illustration-water",
-      "etsy_live": false
+      "etsy_live": true
     }
   ]
 }
