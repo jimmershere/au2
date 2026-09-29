@@ -101,8 +101,8 @@
       "type": "Unisex Tee \u00b7 S\u20135XL",
       "category": "apparel",
       "price": 36,
-      "etsy_url": null,
-      "etsy_live": false,
+      "etsy_url": "https://www.etsy.com/listing/4584976043/ice-stone-we-deal-in-lead-tee-vintage",
+      "etsy_live": true,
       "printify_blueprint": 6,
       "printify_product_id": "6abbaf927f40aaa14a06459b",
       "colors": [
@@ -154,7 +154,7 @@
         "- 100% cotton (solid colors) \u2014 midweight 180 g/m\u00b2 for year-round comfort",
         "- Tubular knit (no side seams) for cleaner drape and reduced waste"
       ],
-      "printify_visible": false,
+      "printify_visible": true,
       "etsy_listing_url": "https://www.etsy.com/listing/4584976043/ice-stone-we-deal-in-lead-tee-vintage",
       "price_range": [
         36,
